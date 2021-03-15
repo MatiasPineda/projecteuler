@@ -1,17 +1,20 @@
-# coding=utf-8
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+import pathlib, importlib
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print("Hi, {0}".format(name))  # Press ⌘F8 to toggle the breakpoint.
+def count_files() -> int:
+    count = 0
+    for path in pathlib.Path("problems").iterdir():
+        if path.is_file():
+            count += 1
+    return count
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    default = count_files()
+    num = int(input(f'Insert your problem number (enter for default {default} ): ') or default)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    module = importlib.import_module(f'problems.problem{num}')
+    try:
+        module.solution()
+    except AttributeError:
+        print('Module does not exist')
