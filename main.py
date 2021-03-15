@@ -1,17 +1,17 @@
-import pathlib, importlib
-
-
-def count_files() -> int:
-    count = 0
-    for path in pathlib.Path("problems").iterdir():
-        if path.is_file():
-            count += 1
-    return count
+import importlib
+from resources.update_readme import update
+from resources.count_files import count_files
 
 
 if __name__ == '__main__':
     default = count_files()
-    num = int(input(f'Insert your problem number (enter for default {default} ): ') or default)
+    num = (input(f'Insert your problem number (enter for default {default} ): ') or default)
+
+    if num in {'u', 'update'}:
+        update()
+        quit()
+
+    num = int(num)
 
     module = importlib.import_module(f'problems.problem{num}')
     try:
