@@ -12,10 +12,7 @@ def largest_product_in_series(n, number=num):
     num_str = str(number)
     largest_product = 0
     for i in range(len(num_str) - (n)):
-        if '0' in num_str[i:i+n]:
-            product = 0
-        else:
-            largest_product = max(largest_product, multiply(num_str[i:i+n]))
+        largest_product = max(largest_product, multiply(num_str[i:i+n]))
     return largest_product
 
 def solution():
