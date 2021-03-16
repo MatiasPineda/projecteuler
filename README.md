@@ -12,3 +12,6 @@ Este repositorio es un compilado de los ejercicios resueltos de [project euler](
 * Problema 6: [Enunciado](https://projecteuler.net/problem=6) - [Código](https://github.com/MatiasPineda/projecteuler/blob/master/problems/problem6.py)
 * Problema 7: [Enunciado](https://projecteuler.net/problem=7) - [Código](https://github.com/MatiasPineda/projecteuler/blob/master/problems/problem7.py)
 * Problema 8: [Enunciado](https://projecteuler.net/problem=8) - [Código](https://github.com/MatiasPineda/projecteuler/blob/master/problems/problem8.py)
+* Problema 9: [Enunciado](https://projecteuler.net/problem=9) - [Código](https://github.com/MatiasPineda/projecteuler/blob/master/problems/problem9.py)
+* Problema 10: [Enunciado](https://projecteuler.net/problem=10) - [Código](https://github.com/MatiasPineda/projecteuler/blob/master/problems/problem10.py)
+* Problema 11: [Enunciado](https://projecteuler.net/problem=11) - [Código](https://github.com/MatiasPineda/projecteuler/blob/master/problems/problem11.py)
