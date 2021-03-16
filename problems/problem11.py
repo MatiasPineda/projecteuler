@@ -19,10 +19,34 @@ matrix = [[8,2,22,97,38,15,0,4,0,75,4,5,7,78,52,12,5,77,91,8],
 [2,73,35,29,78,31,9,1,74,31,49,71,48,86,81,16,23,57,5,54],
 [1,7,54,71,83,51,54,69,16,92,33,48,61,43,52,1,89,19,67,48]]
 
+def prod(num_list):
+    product = 1
+    for i in num_list:
+        product *= i
+    return product
 
-
-def largest_product_grid():
-    pass
+def largest_product_grid(grid: list, number: int):
+    """
+    :param grid: list of list of int, the matrix we study
+    :param number: number of adjacent values
+    :return: largest product of *number adjacent values in the grid
+    """
+    largest_product = 0
+    rows, columns = len(grid), len(grid[0])
+    for i in range(rows):
+        for j in range(columns - (number - 1)):
+            largest_product = max(prod(grid[i][j:j+number]), largest_product)
+            if i <= rows - (number):
+                diagonal = [grid[i+k][j+k] for k in range(number)]
+                largest_product = max(prod(diagonal), largest_product)
+            if i >= number - 1:
+                diagonal = [grid[i-k][j+k] for k in range(number)]
+                largest_product = max(prod(diagonal), largest_product)
+        for j in range(columns):
+            if i <= rows - (number):
+                vertical = [grid[i+k][j] for k in range(number)]
+                largest_product = max(prod(vertical), largest_product)
+    return largest_product
 
 def solution():
-    print(largest_product_grid())
+    print(largest_product_grid(matrix, 4))
