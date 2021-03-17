@@ -16,26 +16,6 @@ def counting_sundays(start, end):
     start_date = tuple(map(int, start.split('/')))
     end_date = tuple(map(int, end.split('/')))
 
-    # total_days = 0
-    # for y in range(start_date[2], end_date[2] +1):
-    #     total_days += 365
-    #     if is_leap_year(y):
-    #         total_days += 1
-    # print(total_days)
-    #
-    # month = start_date[1]
-    # year = start_date[2]
-    #
-    # sundays_on_1st = 0
-    # day = 0
-    # while total_days:
-    #     if day // days_by_month[month] > 0:
-    #         month += 1
-    #     if day % days_by_month[month] == 1:
-    #         sundays_on_1st += 1
-    #
-    #     day +=
-
     all_day_count = []
     for y in range(start_date[2], end_date[2] +1):
         for i in days_by_month:
