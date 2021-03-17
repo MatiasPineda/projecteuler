@@ -1,5 +1,5 @@
 from typing import Union
-
+from math import factorial
 
 def prime_factors(number: int) -> dict:
     """
@@ -26,3 +26,10 @@ def prod(num_list: Union[list, tuple, set]) -> int:
     for i in num_list:
         product *= i
     return product
+
+def binomial_coeficient(n, k):
+    """
+    n over k
+    :return:
+    """
+    return factorial(n)/(factorial(k)*factorial(n-k))
