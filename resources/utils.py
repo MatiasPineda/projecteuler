@@ -32,4 +32,4 @@ def binomial_coeficient(n, k):
     n over k
     :return:
     """
-    return factorial(n)/(factorial(k)*factorial(n-k))
+    return int(factorial(n)/(factorial(k)*factorial(n-k)))
