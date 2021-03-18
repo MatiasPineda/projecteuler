@@ -21,11 +21,26 @@ def prime_factors(number: int) -> dict:
     return f
 
 
+def divisors(n):
+    '''return divisors of n'''
+    d = {1}
+    for i in range(2, int(pow(n,.5))+1):
+        if (n % i) == 0:
+            other = n // i
+            if other == i:
+                pair = {i}
+            else:
+                pair = {i,other}
+            d.update(pair)
+    return d
+
+
 def prod(num_list: Union[list, tuple, set]) -> int:
     product = 1
     for i in num_list:
         product *= i
     return product
+
 
 def binomial_coeficient(n, k):
     """
