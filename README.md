@@ -24,3 +24,6 @@ Este repositorio es un compilado de los ejercicios resueltos de [project euler](
 * Problema 18: [Enunciado](https://projecteuler.net/problem=18) - [Código](https://github.com/MatiasPineda/projecteuler/blob/master/problems/problem18.py)
 * Problema 19: [Enunciado](https://projecteuler.net/problem=19) - [Código](https://github.com/MatiasPineda/projecteuler/blob/master/problems/problem19.py)
 * Problema 20: [Enunciado](https://projecteuler.net/problem=20) - [Código](https://github.com/MatiasPineda/projecteuler/blob/master/problems/problem20.py)
+* Problema 21: [Enunciado](https://projecteuler.net/problem=21) - [Código](https://github.com/MatiasPineda/projecteuler/blob/master/problems/problem21.py)
+* Problema 22: [Enunciado](https://projecteuler.net/problem=22) - [Código](https://github.com/MatiasPineda/projecteuler/blob/master/problems/problem22.py)
+* Problema 23: [Enunciado](https://projecteuler.net/problem=23) - [Código](https://github.com/MatiasPineda/projecteuler/blob/master/problems/problem23.py)
